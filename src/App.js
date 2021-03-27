@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Sidenav from './Sidenav';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-2">
+          <header className="py-4 logo">
+            klaborda.me
+          </header>
+          <Sidenav />
+        </div>
+        <div className="col">
+          Content Here
+        </div>
+      </div>
     </div>
   );
 }
