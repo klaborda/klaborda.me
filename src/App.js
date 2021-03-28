@@ -6,10 +6,12 @@ import Home from "./Home";
 import About from "./About";
 
 function App() {
+  // Data details for the about page
   const aboutData = {
     city: 'Salt Lake City, UT',
-    age: 32
-  }
+    age: 32,
+    stack: ['React', 'Angular', 'Node.js', 'Python', 'Docker', 'OpenShift', 'CouchDB', 'SQL']
+  };
 
   return (
     <Router>

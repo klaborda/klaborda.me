@@ -5,8 +5,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-document.title = 'klaborda.me';
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
