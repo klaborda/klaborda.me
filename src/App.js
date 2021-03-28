@@ -21,7 +21,7 @@ function App() {
                 <Home />
               </Route>
               <Route path="/about">
-                <About /> 
+                <About />
               </Route>
               <Route path="*">
                 <NoMatch />
