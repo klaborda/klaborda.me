@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Sidenav from "./Sidenav";
@@ -7,6 +6,11 @@ import Home from "./Home";
 import About from "./About";
 
 function App() {
+  const aboutData = {
+    city: 'Salt Lake City, UT',
+    age: 32
+  }
+
   return (
     <Router>
       <div className="container-fluid">
@@ -21,7 +25,7 @@ function App() {
                 <Home />
               </Route>
               <Route path="/about">
-                <About />
+                <About data={aboutData} />
               </Route>
               <Route path="*">
                 <NoMatch />

@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import { Link } from "react-router-dom";
 
 function Sidenav() {
@@ -9,7 +8,7 @@ function Sidenav() {
           <Link to="/">Home</Link>
         </li>
         <li class="list-group-item">
-          <Link to="/about">About</Link>
+          <Link to="/about">About Me</Link>
         </li>
       </ul>
     </div>
