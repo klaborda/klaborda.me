@@ -10,6 +10,9 @@ function Sidenav() {
         <li class="list-group-item">
           <Link to="/about">About Me</Link>
         </li>
+        <li class="list-group-item">
+          <Link to="/contact">Contact Me</Link>
+        </li>
       </ul>
     </div>
   );

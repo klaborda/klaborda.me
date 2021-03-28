@@ -4,6 +4,7 @@ import Sidenav from "./Sidenav";
 import NoMatch from "./NoMatch";
 import Home from "./Home";
 import About from "./About";
+import Contact from "./Contact";
 
 function App() {
   // Data details for the about page
@@ -12,6 +13,12 @@ function App() {
     age: 32,
     stack: ['React', 'Angular', 'Node.js', 'Python', 'Docker', 'OpenShift', 'CouchDB', 'SQL']
   };
+
+  // Data details for the contact page
+  const contactData = {
+    linkedIn: 'https://www.linkedin.com/in/kevin-laborda-4386b71a/',
+    email: 'klaborda@gmail.com'
+  }
 
   return (
     <Router>
@@ -28,6 +35,9 @@ function App() {
               </Route>
               <Route path="/about">
                 <About data={aboutData} />
+              </Route>
+              <Route path="/contact">
+                <Contact data={contactData} />
               </Route>
               <Route path="*">
                 <NoMatch />
