@@ -24,7 +24,7 @@ function App() {
     <Router>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-2">
+          <div className="col-sm-2">
             <header className="py-4 logo">klaborda.me</header>
             <Sidenav />
           </div>
