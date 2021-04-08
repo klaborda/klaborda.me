@@ -11,9 +11,6 @@ function Sidenav() {
           <Link to="/about">About Me</Link>
         </li>
         <li className="list-group-item">
-          <Link to="/blog">Blog</Link>
-        </li>
-        <li className="list-group-item">
           <Link to="/contact">Contact Me</Link>
         </li>
       </ul>

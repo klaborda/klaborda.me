@@ -4,7 +4,7 @@ import Sidenav from "./Sidenav";
 import NoMatch from "./NoMatch";
 import Home from "./Home";
 import About from "./About";
-import Blog from "./Blog";
+import BlogEdit from "./BlogEdit";
 import Contact from "./Contact";
 
 function App() {
@@ -37,8 +37,8 @@ function App() {
               <Route path="/about">
                 <About data={aboutData} />
               </Route>
-              <Route path="/blog">
-                <Blog />
+              <Route path="/blogedit">
+                <BlogEdit />
               </Route>
               <Route path="/contact">
                 <Contact data={contactData} />
