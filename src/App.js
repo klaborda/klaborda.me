@@ -5,21 +5,31 @@ import NoMatch from "./NoMatch";
 import Home from "./Home";
 import About from "./About";
 import BlogEdit from "./BlogEdit";
+import BlogList from "./BlogList";
 import Contact from "./Contact";
 
 function App() {
   // Data details for the about page
   const aboutData = {
-    city: 'Salt Lake City, UT',
+    city: "Salt Lake City, UT",
     age: 32,
-    stack: ['React', 'Angular', 'Node.js', 'Python', 'Docker', 'OpenShift', 'CouchDB', 'SQL']
+    stack: [
+      "React",
+      "Angular",
+      "Node.js",
+      "Python",
+      "Docker",
+      "OpenShift",
+      "CouchDB",
+      "SQL",
+    ],
   };
 
   // Data details for the contact page
   const contactData = {
-    linkedIn: 'https://www.linkedin.com/in/kevin-laborda-4386b71a/',
-    email: 'klaborda@gmail.com'
-  }
+    linkedIn: "https://www.linkedin.com/in/kevin-laborda-4386b71a/",
+    email: "klaborda@gmail.com",
+  };
 
   return (
     <Router>
@@ -36,6 +46,9 @@ function App() {
               </Route>
               <Route path="/about">
                 <About data={aboutData} />
+              </Route>
+              <Route path="/blog">
+                <BlogList />
               </Route>
               <Route path="/blogedit">
                 <BlogEdit />

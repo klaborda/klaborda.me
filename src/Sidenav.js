@@ -8,6 +8,9 @@ function Sidenav() {
           <Link to="/">Home</Link>
         </li>
         <li className="list-group-item">
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li className="list-group-item">
           <Link to="/about">About Me</Link>
         </li>
         <li className="list-group-item">
