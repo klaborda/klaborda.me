@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import Moment from "react-moment";
 const gfm = require("remark-gfm");
 
 function BlogList() {
@@ -21,7 +22,10 @@ function BlogList() {
         posts.map((post) => {
           return (
             <>
-              <small key={post?.id}>Thoughts from {post?.author?.name}</small>
+              <small key={post?.id}>
+                Thoughts from {post?.author?.name} on{" "}
+                <Moment format="YYYY/MM/DD">{post?.createdAt}</Moment>
+              </small>
               <div>
                 <ReactMarkdown
                   plugins={[gfm]}
