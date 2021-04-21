@@ -19,18 +19,6 @@ const FEED_QUERY = gql`
 `;
 
 function BlogList() {
-  const posts = [
-    {
-      id: "3",
-      createdAt: "2021-04-20T05:01:54.944Z",
-      title: "Third Post",
-      body: "# Third Post\n\nWeeee\n\nDoes this actually work? ```test```",
-      author: {
-        name: "Kevin",
-      },
-    },
-  ];
-
   const { data } = useQuery(FEED_QUERY);
 
   return (
