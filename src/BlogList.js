@@ -28,7 +28,7 @@ function BlogList() {
         data.feed.map((post) => {
           return (
             <>
-              <Link to={"/blog/" + post?.id}>
+              <Link to={"/blog/" + post?.id} className="text-muted">
                 <small key={post?.id} className="p-1">
                   Thoughts from {post?.author?.name || "Unknown"} on{" "}
                   <Moment format="YYYY/MM/DD">{post?.createdAt}</Moment>
