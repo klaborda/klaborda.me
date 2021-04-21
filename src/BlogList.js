@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
+import { Link } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 const gfm = require("remark-gfm");
 
@@ -22,16 +23,18 @@ function BlogList() {
   const { data } = useQuery(FEED_QUERY);
 
   return (
-    <div>
+    <div className="d-flex flex-column justify-content-around">
       {data &&
         data.feed.map((post) => {
           return (
             <>
-              <small key={post?.id}>
-                Thoughts from {post?.author?.name || "Unknown"} on{" "}
-                <Moment format="YYYY/MM/DD">{post?.createdAt}</Moment>
-              </small>
-              <div>
+              <Link to={"/blog/" + post?.id}>
+                <small key={post?.id} className="p-1">
+                  Thoughts from {post?.author?.name || "Unknown"} on{" "}
+                  <Moment format="YYYY/MM/DD">{post?.createdAt}</Moment>
+                </small>
+              </Link>
+              <div className="px-2">
                 <ReactMarkdown
                   plugins={[gfm]}
                   children={post?.body}
