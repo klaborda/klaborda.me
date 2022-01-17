@@ -43,6 +43,7 @@ function BlogList() {
             </>
           );
         })}
+      {!data && <b>No blog posts available at this time</b>}
     </div>
   );
 }
