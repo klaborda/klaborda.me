@@ -7,21 +7,23 @@ import About from "./About";
 import BlogEdit from "./BlogEdit";
 import BlogList from "./BlogList";
 import Contact from "./Contact";
+import { formatDistanceToNowStrict } from "date-fns";
 
 function App() {
   // Data details for the about page
   const aboutData = {
     city: "Salt Lake City, UT",
-    age: 32,
+    age: formatDistanceToNowStrict(new Date("1988-09-16T09:24:00"), {
+      unit: "year",
+    }),
     stack: [
       "React",
-      "Angular",
       "Node.js",
       "Python",
       "Docker",
       "OpenShift",
-      "CouchDB",
-      "SQL",
+      "MongoDB",
+      "PostgreSQL",
     ],
   };
 
