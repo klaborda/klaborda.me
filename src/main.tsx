@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.tsx";
+import { lightTheme, Provider } from "@adobe/react-spectrum";
 import About from "./About.tsx";
 import BlogList from "./BlogList.tsx";
 import Contact from "./Contact.tsx";
 import Home from "./Home.tsx";
 import Root from "./Root.tsx";
 import ErrorPage from "./ErrorPage.tsx";
-import "./index.css";
 import { aboutData, contactData } from "./constants.ts";
 
 import {
@@ -53,7 +52,9 @@ const client = new ApolloClient({
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <RouterProvider router={router} />
+      <Provider theme={lightTheme} colorScheme="light">
+        <RouterProvider router={router} />
+      </Provider>
     </ApolloProvider>
   </React.StrictMode>
 );

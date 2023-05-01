@@ -1,10 +1,18 @@
-function About(props) {
+interface AboutProps {
+  data: {
+    age: string;
+    city: string;
+    stack: Array<string>;
+  };
+}
+
+function About(props: AboutProps) {
   const { age, city, stack } = props.data;
 
   const stackList = (
     <ul>
-      {stack.map((item) => {
-        return <li>{item}</li>;
+      {stack.map((item: string, idx: number) => {
+        return <li key={idx}>{item}</li>;
       })}
     </ul>
   );

@@ -1,23 +1,24 @@
 import { Link } from "react-router-dom";
+import "./Sidenav.css";
 
 function Sidenav() {
   return (
-    <div>
-      <ul className="list-group list-group-flush">
-        <li className="list-group-item">
+    <nav>
+      <ul>
+        <li>
           <Link to="/">Home</Link>
         </li>
-        <li className="list-group-item">
+        <li>
           <Link to="/about">About Me</Link>
         </li>
-        <li className="list-group-item">
+        <li>
           <Link to="/blog">Blog</Link>
         </li>
-        <li className="list-group-item">
+        <li>
           <Link to="/contact">Contact Me</Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }
 
