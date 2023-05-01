@@ -1,4 +1,5 @@
-import { Button, Text } from "@adobe/react-spectrum";
+import { Button, Text, Flex, View } from "@adobe/react-spectrum";
+import "./Contact.css";
 
 interface ContactProps {
   data: {
@@ -21,20 +22,24 @@ function Contact(props: ContactProps) {
   return (
     <section>
       To contact me, please use the following options:
-      <ul>
-        <li>
-          <b>LinkedIn:</b>
+      <Flex direction="column" gap="size-100">
+        <View marginTop="size-100">
+          <Text marginEnd="size-100" UNSAFE_className="bold">
+            LinkedIn
+          </Text>
           <Button variant="primary" onPress={openLinkedIn}>
             <Text>Kevin Laborda</Text>
           </Button>
-        </li>
-        <li>
-          <b>Email:</b>
+        </View>
+        <View>
+          <Text marginEnd="size-100" UNSAFE_className="bold">
+            Email
+          </Text>
           <Button variant="primary" onPress={openEmail}>
             <Text>{email}</Text>
           </Button>
-        </li>
-      </ul>
+        </View>
+      </Flex>
     </section>
   );
 }
